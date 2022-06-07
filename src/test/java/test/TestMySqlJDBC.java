@@ -12,7 +12,13 @@ public class TestMySqlJDBC {
             var sql = "SELECT id_person, name, lastname, email, telephone FROM person";
             ResultSet resultSet = instruction.executeQuery(sql);
             while (resultSet.next()){
-                System.out.println("Id Person: " + resultSet.getInt("id_person"));
+                System.out.print("Id Person: " + resultSet.getInt("id_person"));
+                System.out.print("Name: " + resultSet.getString("name"));
+                System.out.print("Lastname: " + resultSet.getString("lastname"));
+                System.out.print("Email: " + resultSet.getString("email"));
+                System.out.print("Telephone: " + resultSet.getString("telephone"));
+                System.out.println("");
+
             }
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
