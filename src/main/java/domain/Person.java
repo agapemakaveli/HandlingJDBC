@@ -1,6 +1,7 @@
 package domain;
 
 public class Person {
+
     private int idPerson;
     private String name;
     private String lastname;
@@ -12,12 +13,12 @@ public class Person {
     public Person() {
     }
 
-//For deleting a person we only need the id
+    //For deleting a person we only need the id
     public Person(int idPerson) {
         this.idPerson = idPerson;
     }
 
-//for inserting a new person we do not need the id cuz it is auto-increment
+    //for inserting a new person we do not need the id cuz it is auto-increment
     public Person(String name, String lastname, String email, String telephone) {
         this.name = name;
         this.lastname = lastname;
@@ -25,7 +26,7 @@ public class Person {
         this.telephone = telephone;
     }
 
-//for updating the register
+    //for updating the register
     public Person(int idPerson, String name, String lastname, String email, String telephone) {
         this.idPerson = idPerson;
         this.name = name;
