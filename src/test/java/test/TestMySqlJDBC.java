@@ -18,8 +18,10 @@ public class TestMySqlJDBC {
                 System.out.print("Email: " + resultSet.getString("email"));
                 System.out.print("Telephone: " + resultSet.getString("telephone"));
                 System.out.println("");
-
             }
+            resultSet.close();
+            instruction.close();
+            connection.close();
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
         }
